@@ -1,7 +1,7 @@
 
 <h1>
 ZPL to PNG 🦓
-<a href="https://packagist.org/packages/faerber/pdf-to-zpl"><img src="https://img.shields.io/packagist/v/faerber/pdf-to-zpl" /></a>
+<a href="https://packagist.org/packages/faerber/zpl-to-png"><img src="https://img.shields.io/packagist/v/faerber/zpl-to-png" /></a>
 </h1>
 
 ### A knock-off Zebra renderer
