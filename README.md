@@ -30,10 +30,6 @@ The Labelary API is great, but it only allows 5 requests per second. This leads 
 
 Sadly, there are no simple ways to pay for higher limits. You have to contact Labelary directly and negotiate a custom deal to self-host.
 
-Luckily, there is a Go library that renders ZPL almost perfectly. This project provides:
-- A CLI wrapper around the Go ZPL renderer
-- A PHP wrapper around the CLI for easy integration
-
 ## Benefits
 
 - **No rate limits** - render as many labels as you need
