@@ -1,5 +1,5 @@
-# ZPL to PNG 
-### A knock-off Zebra renderer powered by `stripey-horse`
+# ZPL to PNG
+### A knock-off Zebra renderer
 
 A PHP client for `stripey-horse` (a ZPL to PNG renderer).
 
@@ -55,3 +55,4 @@ for my use case (a PHP app needing to render ZPL files to PNGs and serve them to
 - The `.so` would have to be installed in the PHP env instead of just installing a simple binary
 - FFI would connect PHP to this program. A crash would be fatal for PHP.  
 - FFI would have saved around 50ms invocation time, but for an app that takes 300ms to even render, not worth the trouble!
+- Other image generation tools like GhostScript used by Imagick use process communication also
