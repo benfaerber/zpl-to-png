@@ -4,14 +4,11 @@ ZPL to PNG 🦓
 <a href="https://packagist.org/packages/faerber/zpl-to-png"><img src="https://img.shields.io/packagist/v/faerber/zpl-to-png" /></a>
 </h1>
 
-### A knock-off Zebra renderer
-
 <p>
 <a href="LICENSE"><img src="https://img.shields.io/github/license/benfaerber/pdf-to-zpl?color=yellowgreen" /></a>
 </p>
 
-### A knock-off Zebra renderer
-A PHP client for `stripey-horse` (a ZPL to PNG renderer).
+`stripey-horse`: A knock-off Zebra renderer. A PHP client for `stripey-horse` (a ZPL to PNG renderer).
 
 <img src="test_data/horse_output.png" alt="Horse Output" width="400">
 
