@@ -13,7 +13,7 @@ use Faerber\ZplToPng\StripeyHorseClient;
 
 // Your binary path
 $binaryPath = "/home/user/go/stripey-horse";
-$client = new StripeyHorseClient($binaryPath);
+$client = StripeyHorseClient::buildWithBinaryPath($binaryPath);
 $config = StripeyHorseConfig::builder()
     ->labelPreset("6x4")
     ->rotation(90)
