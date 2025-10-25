@@ -1,6 +1,6 @@
 {
     "name": "faerber/zpl-to-png",
-    "description": "Convert ZPL to PNG locally",
+    "description": "Convert ZPL to PNG using PHP",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -14,5 +14,7 @@
             "email": "faerberbendev@protonmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": "^8.1"
+    }
 }

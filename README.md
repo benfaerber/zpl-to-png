@@ -3,9 +3,12 @@
 
 A PHP client for `stripey-horse` (a ZPL to PNG renderer).
 
+![Horse Output](test_data/horse_output.png)
+
 ## Getting Started
 1. Install [`stripey-horse`](https://github.com/benfaerber/stripey-horse)
 2. Locate your binary path: `which stripey-horse`
+
 
 ```php
 use Faerber\ZplToPng\StripeyHorseConfig;
