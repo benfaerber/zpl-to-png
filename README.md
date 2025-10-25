@@ -3,7 +3,9 @@
 
 A PHP client for `stripey-horse` (a ZPL to PNG renderer).
 
-![Horse Output](test_data/horse_output.png)
+<img src="test_data/horse_output.png" alt="Horse Output" width="400">
+
+An example render.
 
 ## Getting Started
 1. Install [`stripey-horse`](https://github.com/benfaerber/stripey-horse)
