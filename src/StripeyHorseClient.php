@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\RateShopper\StripeyHorse;
+namespace Faerber\ZplToPng;
 
 /**
 * A client to use the `stripey_horse` exe from PHP.
@@ -21,15 +21,22 @@ class StripeyHorseClient {
     }
 
     /**
+    * Builds a client with a provided path.
+    */
+    public static function buildWithBinaryPath(string $binaryPath): self {
+        return new self($binaryPath);
+    }
+
+    /**
     * Builds a StripeyHorseClient by looking up the binary path for the detected platform.
-    * 
+    *
     * @param callable(StripeyHorsePlatform): string $binaryLookup A function that takes a StripeyHorsePlatform and returns the binary path string
     * @return self A new StripeyHorseClient instance
     */
     public static function buildWithBinaryLookup(callable $binaryLookup): self {
-        $platform = StripeyHorsePlatform::detect(); 
+        $platform = StripeyHorsePlatform::detect();
         $binaryPath = $binaryLookup($platform);
-        return new self($binaryPath);
+        return self::buildWithBinaryPath($binaryPath); 
     }
 
     /**
@@ -52,8 +59,8 @@ class StripeyHorseClient {
         ];
 
         $process = proc_open(
-            $command, 
-            $descriptorSpec, 
+            $command,
+            $descriptorSpec,
             $pipes,
             options: $options,
         );

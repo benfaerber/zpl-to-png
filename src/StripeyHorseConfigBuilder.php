@@ -1,5 +1,5 @@
 <?php
-namespace App\Services\RateShopper\StripeyHorse;
+namespace Faerber\ZplToPng;
 
 class StripeyHorseConfigBuilder {
     private int $rotation = 0;
@@ -54,7 +54,7 @@ class StripeyHorseConfigBuilder {
 
         if (! isset(StripeyHorseConfig::LABEL_SIZES[$preset])) {
             throw new StripeyHorseException(
-                "Unknown label preset: {$preset}. Available presets: " . 
+                "Unknown label preset: {$preset}. Available presets: " .
                 implode(', ', array_keys(StripeyHorseConfig::LABEL_SIZES))
             );
         }

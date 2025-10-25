@@ -1,6 +1,8 @@
 <?php
-namespace App\Services\RateShopper\StripeyHorse;
+
+namespace Faerber\ZplToPng; 
 use Exception;
+
 /**
  * Base exception for all StripeyHorse-related errors.
  */

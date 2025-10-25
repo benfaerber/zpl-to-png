@@ -1,5 +1,5 @@
 <?php
-namespace App\Services\RateShopper\StripeyHorse;
+namespace Faerber\ZplToPng;
 
 enum StripeyHorsePlatform: string {
     /** AMD 64: the platform a linux laptop / docker runs on */

@@ -1,5 +1,5 @@
 <?php
-namespace App\Services\RateShopper\StripeyHorse;
+namespace Faerber\ZplToPng;
 
 readonly class StripeyHorseConfig {
     const SIZE_2_INCH = 50.8;
@@ -17,11 +17,11 @@ readonly class StripeyHorseConfig {
         '2x4' => ['width' => self::SIZE_4_INCH, 'height' => self::SIZE_2_INCH],
         '4x2' => ['width' => self::SIZE_4_INCH, 'height' => self::SIZE_2_INCH],
 
-        // 4x6 
+        // 4x6
         '4x6' => ['width' => self::SIZE_4_INCH, 'height' => self::SIZE_6_INCH],
         '6x4' => ['width' => self::SIZE_4_INCH, 'height' => self::SIZE_6_INCH],
 
-        // 4x4 
+        // 4x4
         '4x4' => ['width' => self::SIZE_4_INCH, 'height' => self::SIZE_4_INCH],
 
         // 3x5
