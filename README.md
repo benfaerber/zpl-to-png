@@ -1,4 +1,4 @@
-# ZPL to PNG
+# ZPL to PNG 🦓
 ### A knock-off Zebra renderer
 
 A PHP client for `stripey-horse` (a ZPL to PNG renderer).
