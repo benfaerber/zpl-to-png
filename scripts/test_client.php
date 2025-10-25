@@ -41,11 +41,32 @@ try {
         './test_data/php_client_output_small.png'
     );
 
+
+
     $converter->convertAndSave(
         './test_data/clean_seed.zplbin',
         '4x2',
         './test_data/php_client_output_clean_180.png',
         rotate: 270
+    );
+
+
+    $converter->convertAndSave(
+        './test_data/clean_seed.zplbin',
+        '6x4',
+        './test_data/clean_seed_output.png'
+    );
+
+    $converter->convertAndSave(
+        './test_data/horse.zplbin',
+        '6x4',
+        './test_data/horse_output.png'
+    );
+
+    $converter->convertAndSave(
+        './test_data/pumpkin.zplbin',
+        '6x4',
+        './test_data/pumpkin_output.png'
     );
 
 } catch (Exception $e) {
