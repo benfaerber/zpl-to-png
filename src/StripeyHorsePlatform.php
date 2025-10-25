@@ -4,7 +4,7 @@ namespace Faerber\ZplToPng;
 enum StripeyHorsePlatform: string {
     /** AMD 64: the platform a linux laptop / docker runs on */
     case Amd64 = "amd64";
-    /** ARM 64: the platform the production server runs on */
+    /** ARM 64: some azure servers use arm */
     case Arm64 = "arm64";
 
     public static function detect(): self {
