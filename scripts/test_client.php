@@ -60,7 +60,8 @@ try {
     $converter->convertAndSave(
         './test_data/horse.zplbin',
         '6x4',
-        './test_data/horse_output.png'
+        './test_data/horse_output.png',
+        rotate: 90,
     );
 
     $converter->convertAndSave(
