@@ -1,5 +1,5 @@
-# Stripey Horse 🦓
-### A knock-off Zebra renderer
+# ZPL to PNG 
+### A knock-off Zebra renderer powered by `stripey-horse`
 
 A PHP client for `stripey-horse` (a ZPL to PNG renderer).
 
@@ -8,6 +8,9 @@ A PHP client for `stripey-horse` (a ZPL to PNG renderer).
 2. Locate your binary path: `which stripey-horse`
 
 ```php
+use Faerber\ZplToPng\StripeyHorseConfig;
+use Faerber\ZplToPng\StripeyHorseClient;
+
 // Your binary path
 $binaryPath = "/home/user/go/stripey-horse";
 $client = new StripeyHorseClient($binaryPath);
