@@ -51,7 +51,7 @@ Sadly, there are no simple ways to pay for higher limits. You have to contact La
 
 ## Development
 
-- **Test Binary** - `./scripts/test_client.sh $(which stripey-horse)`
+- **Test Binary** - `php ./scripts/test_client.php $(which stripey-horse)`
 
 ## This uses process communication, why no FFI?
 This was a tough design but I decided process communication was better
