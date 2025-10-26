@@ -23,7 +23,7 @@ jobs:
       uses: shivammathur/setup-php@v2
       with:
         php-version: ${{ matrix.php-version }}
-        coverage: none
+        coverage: xdebug
 
     - name: Validate composer.json
       run: composer validate --strict
@@ -55,3 +55,14 @@ jobs:
 
     - name: Run unit tests
       run: STRIPEY_HORSE_BINARY=$(which stripey-horse) composer test
+
+    - name: Run tests with coverage
+      if: matrix.php-version == '8.3'
+      run: STRIPEY_HORSE_BINARY=$(which stripey-horse) composer test:coverage -- --coverage-clover=coverage.xml
+
+    - name: Upload coverage to Codecov
+      if: matrix.php-version == '8.3'
+      uses: codecov/codecov-action@v4
+      with:
+        files: ./coverage.xml
+        fail_ci_if_error: false
