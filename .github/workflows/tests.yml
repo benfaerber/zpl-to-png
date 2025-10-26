@@ -45,7 +45,7 @@ jobs:
         go-version: 'stable'
 
     - name: Install stripey-horse
-      run: go install github.com/benfaerber/stripey-horse@latest
+      run: go install github.com/benfaerber/stripey-horse@v1.1.0
 
     # - name: Run PHPStan
     #   run: composer phpstan
