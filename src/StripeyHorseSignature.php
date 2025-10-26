@@ -21,7 +21,7 @@ class StripeyHorseSignature {
     /** Creates a signature instance from the process output JSON. */
     public static function fromProcessOutput(string $processOutput): self {
         if (! self::jsonValidate($processOutput)) {
-            throw StripeyHorseException::invalidExecutablePath("Invalid signature from stripey-horse!");
+            throw new StripeyHorseException("Invalid signature!");
         }
 
         $data = json_decode($processOutput);
@@ -39,7 +39,7 @@ class StripeyHorseSignature {
 
     /** Validates JSON string for compatibility with older PHP versions. */
     public static function jsonValidate(string $jsonData): bool {
-        json_encode($jsonData);
+        json_decode($jsonData);
         return json_last_error() === JSON_ERROR_NONE;
     } 
 }
