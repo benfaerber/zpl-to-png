@@ -1,4 +1,5 @@
 <?php
+
 namespace Faerber\ZplToPng;
 
 enum StripeyHorsePlatform: string {
@@ -44,7 +45,7 @@ enum StripeyHorsePlatform: string {
      * Get a human-readable description of the platform
      */
     public function getDescription(): string {
-        return match($this) {
+        return match ($this) {
             self::Amd64 => 'AMD/Intel 64-bit (x86_64)',
             self::Arm64 => 'ARM 64-bit (aarch64)',
         };
@@ -56,7 +57,7 @@ enum StripeyHorsePlatform: string {
      * @return array<string>
      */
     public function getAliases(): array {
-        return match($this) {
+        return match ($this) {
             self::Amd64 => ['x86_64', 'x64', 'amd64'],
             self::Arm64 => ['aarch64', 'arm64'],
         };
@@ -66,7 +67,7 @@ enum StripeyHorsePlatform: string {
      * Get the bit width of the platform
      */
     public function getBitWidth(): int {
-        return match($this) {
+        return match ($this) {
             self::Amd64 => 64,
             self::Arm64 => 64,
         };
@@ -77,6 +78,7 @@ enum StripeyHorsePlatform: string {
      */
     public function matchesMachineType(string $machineType): bool {
         $normalized = strtolower(trim($machineType));
+
         return in_array($normalized, $this->getAliases(), true) || $normalized === $this->value;
     }
 
@@ -109,6 +111,7 @@ enum StripeyHorsePlatform: string {
                 return $platform;
             }
         }
+
         return null;
     }
 }

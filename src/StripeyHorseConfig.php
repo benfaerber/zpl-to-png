@@ -1,12 +1,13 @@
 <?php
+
 namespace Faerber\ZplToPng;
 
 readonly class StripeyHorseConfig {
-    const SIZE_2_INCH = 50.8;
-    const SIZE_4_INCH = 101.6;
-    const SIZE_6_INCH = 152.4;
-    const SIZE_3_INCH = 76.2;
-    const SIZE_5_INCH = 127.0;
+    public const SIZE_2_INCH = 50.8;
+    public const SIZE_4_INCH = 101.6;
+    public const SIZE_6_INCH = 152.4;
+    public const SIZE_3_INCH = 76.2;
+    public const SIZE_5_INCH = 127.0;
 
     public const DEFAULT_WIDTH_MM = self::SIZE_4_INCH;
     public const DEFAULT_HEIGHT_MM = self::SIZE_6_INCH;

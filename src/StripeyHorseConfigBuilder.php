@@ -1,4 +1,5 @@
 <?php
+
 namespace Faerber\ZplToPng;
 
 class StripeyHorseConfigBuilder {
@@ -10,36 +11,42 @@ class StripeyHorseConfigBuilder {
     /** Sets the rotation angle in degrees. */
     public function rotation(int $rotation): self {
         $this->rotation = $rotation;
+
         return $this;
     }
 
     /** Sets the label width in millimeters. */
     public function labelWidthMm(float $labelWidthMm): self {
         $this->labelWidthMm = $labelWidthMm;
+
         return $this;
     }
 
     /** Sets the label height in millimeters. */
     public function labelHeightMm(float $labelHeightMm): self {
         $this->labelHeightMm = $labelHeightMm;
+
         return $this;
     }
 
     /** Sets the label width in pixels. */
     public function labelWidthPx(int $labelWidthPx): self {
         $this->labelWidthMm = StripeyHorseConfig::pixelsToMillimeters($labelWidthPx, $this->dpmm);
+
         return $this;
     }
 
     /** Sets the label height in pixels. */
     public function labelHeightPx(int $labelHeightPx): self {
         $this->labelHeightMm = StripeyHorseConfig::pixelsToMillimeters($labelHeightPx, $this->dpmm);
+
         return $this;
     }
 
     /** Sets the dots per millimeter resolution. */
     public function dpmm(int $dpmm): self {
         $this->dpmm = $dpmm;
+
         return $this;
     }
 
@@ -47,6 +54,7 @@ class StripeyHorseConfigBuilder {
     public function labelSize(float $widthMm, float $heightMm): self {
         $this->labelWidthMm = $widthMm;
         $this->labelHeightMm = $heightMm;
+
         return $this;
     }
 
@@ -54,6 +62,7 @@ class StripeyHorseConfigBuilder {
     public function labelSizePx(int $widthPx, int $heightPx): self {
         $this->labelWidthMm = StripeyHorseConfig::pixelsToMillimeters($widthPx, $this->dpmm);
         $this->labelHeightMm = StripeyHorseConfig::pixelsToMillimeters($heightPx, $this->dpmm);
+
         return $this;
     }
 

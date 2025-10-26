@@ -122,7 +122,7 @@ test('labelPreset method is case insensitive', function () {
 test('labelPreset throws exception for unknown preset', function () {
     $builder = new StripeyHorseConfigBuilder();
 
-    expect(fn() => $builder->labelPreset('unknown'))
+    expect(fn () => $builder->labelPreset('unknown'))
         ->toThrow(StripeyHorseException::class, 'Unknown label preset: unknown');
 });
 

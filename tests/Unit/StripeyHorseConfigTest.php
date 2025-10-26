@@ -122,7 +122,7 @@ test('label size constants are correct', function () {
 
 test('label sizes array contains common presets', function () {
     expect(StripeyHorseConfig::LABEL_SIZES)->toHaveKeys([
-        '2x4', '4x2', '4x6', '6x4', '4x4', '3x5', '5x3'
+        '2x4', '4x2', '4x6', '6x4', '4x4', '3x5', '5x3',
     ]);
 });
 

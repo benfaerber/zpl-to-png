@@ -13,7 +13,7 @@ beforeEach(function () {
     // Check if binary exists and is executable
     $this->binaryExists = file_exists($this->binaryPath) && is_executable($this->binaryPath);
 
-    if (!$this->binaryExists) {
+    if (! $this->binaryExists) {
         $this->markTestSkipped("stripey-horse binary not found at {$this->binaryPath}. Set STRIPEY_HORSE_BINARY env var or install stripey-horse.");
     }
 });

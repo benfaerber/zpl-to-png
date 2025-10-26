@@ -43,7 +43,8 @@ class StripeyHorseClient {
     public static function buildWithBinaryLookup(callable $binaryLookup): self {
         $platform = StripeyHorsePlatform::detect();
         $binaryPath = $binaryLookup($platform);
-        return self::buildWithBinaryPath($binaryPath); 
+
+        return self::buildWithBinaryPath($binaryPath);
     }
 
     /**
@@ -58,11 +59,11 @@ class StripeyHorseClient {
         $descriptorSpec = [
             0 => ['pipe', 'r'],
             1 => ['pipe', 'w'],
-            2 => ['pipe', 'w']
+            2 => ['pipe', 'w'],
         ];
 
         $options = [
-            'timeout' => 10
+            'timeout' => 10,
         ];
 
         $process = proc_open(
@@ -107,7 +108,7 @@ class StripeyHorseClient {
         $descriptorSpec = [
             0 => ['pipe', 'r'],
             1 => ['pipe', 'w'],
-            2 => ['pipe', 'w']
+            2 => ['pipe', 'w'],
         ];
 
         $process = proc_open(
@@ -139,11 +140,13 @@ class StripeyHorseClient {
 
     private function verifyIsStripeyHorse(): string {
         $signature = $this->getSignature();
+
         return $signature->isExpected();
-    } 
+    }
 
     private function buildCommand(StripeyHorseConfig $config): string {
         $jsonPayload = $config->toJsonPayload();
+
         return sprintf(
             '%s --config %s',
             escapeshellarg($this->executablePath),

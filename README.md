@@ -1,10 +1,12 @@
 
 <h1>
 ZPL to PNG 🦓
-<a href="https://packagist.org/packages/faerber/zpl-to-png"><img src="https://img.shields.io/packagist/v/faerber/zpl-to-png" /></a>
+    <a href="https://packagist.org/packages/faerber/zpl-to-png"><img src="https://img.shields.io/packagist/v/faerber/zpl-to-png" /></a>
+    <a href="https://github.com/benfaerber/zpl-to-png/actions"><img src="https://github.com/benfaerber/zpl-to-png/actions/workflows/tests.yml/badge.svg" /></a>
 </h1>
 
 <p>
+<a href="phpstan.neon"><img src="https://img.shields.io/badge/PHPStan-level%201-brightgreen?logo=php" /></a>
 <a href="LICENSE"><img src="https://img.shields.io/github/license/benfaerber/pdf-to-zpl?color=yellowgreen" /></a>
 </p>
 

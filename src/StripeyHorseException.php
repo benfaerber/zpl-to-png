@@ -1,6 +1,7 @@
 <?php
 
-namespace Faerber\ZplToPng; 
+namespace Faerber\ZplToPng;
+
 use Exception;
 
 /**

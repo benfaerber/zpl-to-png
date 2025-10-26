@@ -4,18 +4,16 @@ namespace Faerber\ZplToPng;
 
 /**
 * A signature send from `stripey-horse`.
-* Allows the user to make sure its the proper binary. 
+* Allows the user to make sure its the proper binary.
 */
 class StripeyHorseSignature {
-    const EXPECTED_APP_NAME = "stripey-horse";
+    public const EXPECTED_APP_NAME = "stripey-horse";
 
     private function __construct(
         public readonly string $app,
         public readonly string $version,
         public readonly string $signature,
-    )
-    {
-        
+    ) {
     }
 
     /** Creates a signature instance from the process output JSON. */
@@ -25,6 +23,7 @@ class StripeyHorseSignature {
         }
 
         $data = json_decode($processOutput);
+
         return new self(
             app: $data->app,
             version: $data->version,
@@ -40,6 +39,7 @@ class StripeyHorseSignature {
     /** Validates JSON string for compatibility with older PHP versions. */
     public static function jsonValidate(string $jsonData): bool {
         json_decode($jsonData);
+
         return json_last_error() === JSON_ERROR_NONE;
-    } 
+    }
 }

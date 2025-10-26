@@ -1,7 +1,7 @@
 <?php
 
-use Faerber\ZplToPng\StripeyHorsePlatform;
 use Faerber\ZplToPng\StripeyHorseException;
+use Faerber\ZplToPng\StripeyHorsePlatform;
 
 test('enum has correct cases', function () {
     $cases = StripeyHorsePlatform::cases();
@@ -113,7 +113,7 @@ test('getSystemInfo returns array with expected keys', function () {
             'uname_machine',
             'uname_system',
             'uname_release',
-            'detected_platform'
+            'detected_platform',
         ]);
 });
 
@@ -129,7 +129,7 @@ test('getSystemInfo contains valid data', function () {
 
 test('detect returns a valid platform on 64-bit systems', function () {
     if (PHP_INT_SIZE !== 8) {
-        expect(fn() => StripeyHorsePlatform::detect())
+        expect(fn () => StripeyHorsePlatform::detect())
             ->toThrow(StripeyHorseException::class);
     } else {
         $platform = StripeyHorsePlatform::detect();
