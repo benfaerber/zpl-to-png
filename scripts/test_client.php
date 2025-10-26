@@ -69,6 +69,12 @@ try {
         '6x4',
         './test_data/pumpkin_output.png'
     );
+
+    $converter->convertAndSave(
+        './test_data/fedex.zplbin',
+        '6x4',
+        './test_data/fedex_output.png'
+    );
 } catch (Exception $e) {
     echo "Error: " . $e->getMessage() . "\n";
     exit(1);
