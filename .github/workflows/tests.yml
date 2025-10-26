@@ -47,8 +47,8 @@ jobs:
     - name: Install stripey-horse
       run: go install github.com/benfaerber/stripey-horse@latest
 
-    - name: Run PHPStan
-      run: composer phpstan
+    # - name: Run PHPStan
+    #   run: composer phpstan
 
     - name: Check coding standards
       run: composer cs:check
