@@ -18,7 +18,9 @@
         "php": "^8.1"
     },
     "require-dev": {
-        "pestphp/pest": "^4.1"
+        "pestphp/pest": "^4.1",
+        "friendsofphp/php-cs-fixer": "^3.89",
+        "phpstan/phpstan": "^2.1"
     },
     "config": {
         "allow-plugins": {
@@ -27,6 +29,9 @@
     },
     "scripts": {
         "test": "STRIPEY_HORSE_BINARY=$(which stripey-horse) pest",
-        "test:coverage": "XDEBUG_MODE=coverage STRIPEY_HORSE_BINARY=$(which stripey-horse) pest --coverage"
+        "test:coverage": "XDEBUG_MODE=coverage STRIPEY_HORSE_BINARY=$(which stripey-horse) pest --coverage",
+        "cs:check": "php-cs-fixer fix --dry-run --diff",
+        "cs:fix": "php-cs-fixer fix",
+        "phpstan": "phpstan analyse"
     }
 }

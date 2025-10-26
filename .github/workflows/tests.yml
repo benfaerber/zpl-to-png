@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        php-version: ['8.1', '8.2', '8.3']
+        php-version: ['8.3', '8.4']
 
     name: PHP ${{ matrix.php-version }}
 
@@ -46,6 +46,12 @@ jobs:
 
     - name: Install stripey-horse
       run: go install github.com/benfaerber/stripey-horse@latest
+
+    - name: Run PHPStan
+      run: composer phpstan
+
+    - name: Check coding standards
+      run: composer cs:check
 
     - name: Run unit tests
       run: STRIPEY_HORSE_BINARY=$(which stripey-horse) composer test
