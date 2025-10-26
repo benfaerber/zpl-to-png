@@ -18,6 +18,7 @@ class StripeyHorseSignature {
         
     }
 
+    /** Creates a signature instance from the process output JSON. */
     public static function fromProcessOutput(string $processOutput): self {
         if (! self::jsonValidate($processOutput)) {
             throw StripeyHorseException::invalidExecutablePath("Invalid signature from stripey-horse!");
@@ -31,11 +32,12 @@ class StripeyHorseSignature {
         );
     }
 
+    /** Checks if the signature matches the expected application name. */
     public function isExpected(): bool {
         return $this->app === self::EXPECTED_APP_NAME;
     }
 
-    /** For older PHP versions */ 
+    /** Validates JSON string for compatibility with older PHP versions. */
     public static function jsonValidate(string $jsonData): bool {
         json_encode($jsonData);
         return json_last_error() === JSON_ERROR_NONE;

@@ -37,10 +37,12 @@ readonly class StripeyHorseConfig {
     ) {
     }
 
+    /** Creates a new config builder instance. */
     public static function builder(): StripeyHorseConfigBuilder {
         return new StripeyHorseConfigBuilder();
     }
 
+    /** Converts the configuration to an array. */
     public function toArray(): array {
         return [
             'labelWidthMm' => $this->labelWidthMm,
@@ -50,14 +52,17 @@ readonly class StripeyHorseConfig {
         ];
     }
 
+    /** Converts pixels to millimeters using the given dots per millimeter. */
     public static function pixelsToMillimeters(int $pixels, int $dpmm = self::DEFAULT_DPMM): float {
         return $pixels / $dpmm;
     }
 
+    /** Converts millimeters to pixels using the given dots per millimeter. */
     public static function millimetersToPixels(float $mm, int $dpmm = self::DEFAULT_DPMM): int {
         return (int) round($mm * $dpmm);
     }
 
+    /** Converts the configuration to a JSON string. */
     public function toJsonPayload(): string {
         return json_encode($this->toArray());
     }
