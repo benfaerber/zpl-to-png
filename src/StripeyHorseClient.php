@@ -22,7 +22,7 @@ class StripeyHorseClient {
             throw StripeyHorseException::invalidExecutablePath($this->executablePath);
         }
 
-        if (! $this->verifyIsStripeyHorse($this->executablePath)) {
+        if (! $this->verifyIsStripeyHorse()) {
             throw StripeyHorseException::invalidExecutablePath($this->executablePath);
         }
     }
@@ -62,15 +62,10 @@ class StripeyHorseClient {
             2 => ['pipe', 'w'],
         ];
 
-        $options = [
-            'timeout' => 10,
-        ];
-
         $process = proc_open(
             $command,
             $descriptorSpec,
             $pipes,
-            options: $options,
         );
 
         if (! is_resource($process)) {
@@ -138,7 +133,7 @@ class StripeyHorseClient {
         return StripeyHorseSignature::fromProcessOutput($output);
     }
 
-    private function verifyIsStripeyHorse(): string {
+    private function verifyIsStripeyHorse(): bool {
         $signature = $this->getSignature();
 
         return $signature->isExpected();

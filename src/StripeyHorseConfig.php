@@ -43,7 +43,10 @@ readonly class StripeyHorseConfig {
         return new StripeyHorseConfigBuilder();
     }
 
-    /** Converts the configuration to an array. */
+    /** 
+    * Converts the configuration to an array. 
+    * @return array<string, mixed> 
+    */
     public function toArray(): array {
         return [
             'labelWidthMm' => $this->labelWidthMm,
@@ -65,6 +68,10 @@ readonly class StripeyHorseConfig {
 
     /** Converts the configuration to a JSON string. */
     public function toJsonPayload(): string {
-        return json_encode($this->toArray());
+        $data = json_encode($this->toArray());
+        if (! is_string($data)) {
+            throw new StripeyHorseException("Failed to serialize");
+        }
+        return $data;
     }
 }

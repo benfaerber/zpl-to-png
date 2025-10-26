@@ -6,7 +6,7 @@ ZPL to PNG 🦓
 </h1>
 
 <p>
-<a href="phpstan.neon"><img src="https://img.shields.io/badge/PHPStan-level%201-brightgreen?logo=php" /></a>
+<a href="phpstan.neon"><img src="https://img.shields.io/badge/PHPStan-level%2010-brightgreen?logo=php" /></a>
 <a href="LICENSE"><img src="https://img.shields.io/github/license/benfaerber/pdf-to-zpl?color=yellowgreen" /></a>
 </p>
 

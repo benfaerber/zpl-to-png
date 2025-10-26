@@ -24,6 +24,22 @@ class StripeyHorseSignature {
 
         $data = json_decode($processOutput);
 
+        if (! is_object($data)) {
+            throw new StripeyHorseException("Invalid signature format!");
+        }
+
+        if (! isset($data->app) || ! is_string($data->app)) {
+            throw new StripeyHorseException("Invalid signature: missing or invalid app field!");
+        }
+
+        if (! isset($data->version) || ! is_string($data->version)) {
+            throw new StripeyHorseException("Invalid signature: missing or invalid version field!");
+        }
+
+        if (! isset($data->signature) || ! is_string($data->signature)) {
+            throw new StripeyHorseException("Invalid signature: missing or invalid signature field!");
+        }
+
         return new self(
             app: $data->app,
             version: $data->version,
