@@ -52,6 +52,9 @@ jobs:
 
     - name: Check coding standards
       run: composer cs:check
+    
+    - name: Echo
+      run: echo $(which stripey-horse)
 
     - name: Run unit tests
       run: STRIPEY_HORSE_BINARY=$(which stripey-horse) composer test
