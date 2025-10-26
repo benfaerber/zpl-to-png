@@ -12,7 +12,7 @@ ZPL to PNG 🦓
 
 `stripey-horse`: A knock-off Zebra renderer. A PHP client for `stripey-horse` (a ZPL to PNG renderer).
 
-<img src="test_data/fedex_output.png" alt="Fedex Output" width="400">
+<img src="test_data/fedex_output.png" alt="Fedex Output" width="200">
 
 An example render of <a href="./test_data/fedex.zplbin">fedex.zplbin</a>.
 
