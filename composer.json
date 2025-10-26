@@ -26,7 +26,7 @@
         }
     },
     "scripts": {
-        "test": "pest",
-        "test:coverage": "pest --coverage"
+        "test": "STRIPEY_HORSE_BINARY=$(which stripey-horse) pest",
+        "test:coverage": "XDEBUG_MODE=coverage STRIPEY_HORSE_BINARY=$(which stripey-horse) pest --coverage"
     }
 }
