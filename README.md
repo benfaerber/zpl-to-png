@@ -51,6 +51,7 @@ Sadly, there are no simple ways to pay for higher limits. You have to contact La
 - **No external dependencies** - works completely offline
 - **Cost effective** - hence "Stripey Horse" instead of "Zebra"
 - **Near-perfect rendering** - comparable quality to Labelary
+- **Accurate Barcode rendering** - able to render all sorts of industry barcodes for UPS, Fedex, etc.
 
 ## Development
 
